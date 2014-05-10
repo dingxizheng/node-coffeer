@@ -1,24 +1,30 @@
-{% extends 'layout.html' %}
-{% block content %}
-<div class="login">
-<div class="login-screen">
-	<div class="login-icon">
-		<img src="images/login/icon.png" alt="Welcome to Mail App">
-		<h4>Welcome to <small>Mail App</small></h4>
-	</div>
-	<div class="login-form">
-	<div class="form-group">
-		<input type="text" class="form-control login-field" value="" placeholder="Enter your name" id="login-name">
-		<label class="login-field-icon fui-user" for="login-name"></label>
-	</div>
-	<div class="form-group">
-		<input type="password" class="form-control login-field" value="" placeholder="Password" id="login-pass">
-		<label class="login-field-icon fui-lock" for="login-pass"></label>
-	</div>
+{% extends 'layout.html' %} {% block content %}
+<div class="row login-container">
+    <div class="col-xs-12 col-md-2">
+        <div class="login-icon">
+            <img src="images/login/icon.png" alt="Welcome to Coffeer Site">
+            <h4>Welcome to
+                <small>Coffeer-正</small>
+            </h4>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-6">
+        <div class="login-field">
+            <div class="login-form">
+                <div class="form-group">
+                    <input type="text" class="form-control login-field" value="" placeholder="Enter your name" id="login-name">
+                    <label class="login-field-icon fui-user" for="login-name"></label>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control login-field" value="" placeholder="Password" id="login-pass">
+                    <label class="login-field-icon fui-lock" for="login-pass"></label>
+                </div>
 
-		<a class="btn btn-primary btn-lg btn-block" href="#">Log in</a>
-		<a class="login-link" href="#">Lost your password?</a>
-	</div>
-</div>
+                <a class="btn btn-primary btn-lg btn-block" href="#">Sign In</a>
+                <a class="btn btn-info btn-lg btn-block" href="#">Sign Up</a>
+                <a class="login-link" href="#">Lost your password?</a>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}

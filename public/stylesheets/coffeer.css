@@ -1,26 +1,22 @@
-.container {
+
+.container-fluid {
   width: 970px !important;
 }
 
-.login {
-	background: none;
-	background-size: none;
-	color: #ffffff;
-	margin-bottom: none;
-	padding: 20px;
+.login-container {
 	margin-top: 100px;
-	position: relative;
 }
 
-.login-screen {
+.login-field {
 	background-color: #fff; 
-	min-height: 350px;
-	padding: 20px 300px 33px 150px;
+	padding: 20px;
 }
 
 .login-icon {
-	left: 40px;
-	position: absolute;
-	top: 40px;
+	left: inherit;
+	position: relative;
+	top: inherit;
 	width: 96px;
+	margin-top: 40px;
+	margin-left: 20px;
 }
