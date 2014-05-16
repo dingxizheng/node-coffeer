@@ -1,0 +1,24 @@
+{% extends '../layout.html' %} 
+
+{% block stylesheets %}
+<link rel="stylesheet" href="stylesheets/bootstrap-markdown.min.css">
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <h3>Create new blog</h3>
+    <form>
+        <input name="title" type="text" placeholder="Title?" />
+        <textarea name="content" data-provide="markdown" rows="10"></textarea>
+        <label class="checkbox">
+            <input name="publish" type="checkbox">Publish
+        </label>
+        <hr/>
+        <button type="submit" class="btn">Submit</button>
+    </form>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+<script src="javascripts/bootstrap-markdown.js"></script>
+{% endblock %}
