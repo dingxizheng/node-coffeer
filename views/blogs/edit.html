@@ -1,24 +1,37 @@
-{% extends '../layout.html' %} 
+{% extends '../layout.html' %} {% block stylesheets %}
+<link rel="stylesheet" href="../stylesheets/coffeer-blogs.css">
+<link rel="stylesheet" href="../stylesheets/summernote.css">{% endblock %} {% block content %}
 
-{% block stylesheets %}
-<link rel="stylesheet" href="stylesheets/bootstrap-markdown.min.css">
-{% endblock %}
-
-{% block content %}
 <div class="row">
-    <h3>Create new blog</h3>
-    <form>
-        <input name="title" type="text" placeholder="Title?" />
-        <textarea name="content" data-provide="markdown" rows="10"></textarea>
-        <label class="checkbox">
-            <input name="publish" type="checkbox">Publish
-        </label>
-        <hr/>
-        <button type="submit" class="btn">Submit</button>
-    </form>
-</div>
-{% endblock %}
+    <div class="col-md-9 col-xs-12 editor">
+        <form role="form">
+            <fieldset>
+                <div class="form-group">
+                    <label for="TextInput">Title</label>
+                    <input type="text" id="TextInput" class="form-control" placeholder="Disabled input">
+                </div>
+                <div class="form-group">
+                    <label for="summernote">Blog</label>
+                    <div id="summernote"></div>
+                </div>
 
-{% block javascripts %}
-<script src="javascripts/bootstrap-markdown.js"></script>
+                <div class="form-group">
+                    <label for="TagInput">Tags</label>
+                    <input type="text" id="TagInput" class="form-control" placeholder="Tags">
+                </div>
+                <button type="submit" class="btn btn-primary">Post</button>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+{% endblock %} {% block javascripts %}
+<script src="../javascripts/summernote.min.js"></script>
+<script type="text/javascript">
+$(function() {
+    $("#summernote").summernote({
+        height: 300
+    });
+})
+</script>
 {% endblock %}
